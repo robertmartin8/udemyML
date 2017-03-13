@@ -7,6 +7,7 @@ preprocess the data.
 
 ###Python
 ```python
+import pandas
 pd.read_csv()
 ```
 
@@ -21,10 +22,11 @@ Missing data needs to be filled in. A convenient way of doing so is by replacing
 
 ### Python
 
-In python, we use `sklearn.preprocessing.Imputer`. Instatiate the object, then fit and transform appropriately. N
+In python, we use `sklearn.preprocessing.Imputer`. Instantiate the object, then fit and transform appropriately.
 
 ```python
 from sklearn.preprocessing import Imputer
+
 imputer = Imputer()
 X[:, 1:3] = imputer.fit_transform(X[:, 1:3])
 ```
@@ -68,7 +70,7 @@ Luckily, when you map the categories onto numerals, R treats these numerals as l
 y = factor(y, levels = c('No', 'Yes'), labels = c(0,1))
 ```
 
-## 4. Splitting the data into training and testing
+## 4. Splitting the data into training and testing sets
 
 A general rule of thumb is to use an 80:20 training:testing split.
 
@@ -76,6 +78,7 @@ A general rule of thumb is to use an 80:20 training:testing split.
 
 ```python
 from sklearn.model_selection import train_test_split
+
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 ```
 
@@ -84,6 +87,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 In R, we need the `caTools` package.
 
 ```R
+library(caTools)
 split = sample.split(dataset$y, SplitRatio = 0.8)
 training_set = subset(dataset, split == TRUE)
 testing_set = subset(dataset, split == FALSE)
@@ -93,9 +97,7 @@ testing_set = subset(dataset, split == FALSE)
 
 It is important to scale features, otherwise one feature may be given excessive weight simply because its values are larger. Typically we want to map the X data to the interval [-1, 1]. We can do this by standardising or normalising.
 
-\[ x_{std} = \frac{x-\mu}{\sigma}\]
-\[x_{norm} = \frac{x - \min(x)}{\max(x)-\min(x)}\]
-
+![](images/2017/03/feature_scaling.png)
 
 ### Python
 
