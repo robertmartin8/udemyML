@@ -21,11 +21,12 @@ Missing data needs to be filled in. A convenient way of doing so is by replacing
 
 ### Python
 
-In python, we use `sklearn.preprocessing.Imputer`. Instatiate the object, then fit and transform appropriately. e.g:
+In python, we use `sklearn.preprocessing.Imputer`. Instatiate the object, then fit and transform appropriately. N
 
 ```python
 from sklearn.preprocessing import Imputer
-X[:, 1:3] = Imputer().fit_transform(X[:, 1:3])
+imputer = Imputer()
+X[:, 1:3] = imputer.fit_transform(X[:, 1:3])
 ```
 
 ### R
@@ -86,4 +87,28 @@ In R, we need the `caTools` package.
 split = sample.split(dataset$y, SplitRatio = 0.8)
 training_set = subset(dataset, split == TRUE)
 testing_set = subset(dataset, split == FALSE)
+```
+
+## 5. Feature Scaling
+
+It is important to scale features, otherwise one feature may be given excessive weight simply because its values are larger. Typically we want to map the X data to the interval [-1, 1]. We can do this by standardising or normalising.
+
+\[ x_{std} = \frac{x-\mu}{\sigma}\]
+\[x_{norm} = \frac{x - \min(x)}{\max(x)-\min(x)}\]
+
+
+### Python
+
+```python
+from sklearn.preprocessing import StandardScaler
+
+sc_X = StandardScaler()
+X_train = sc_X.fit_transform(X_train)
+
+```
+
+### R
+
+```R
+training_set = scale(training_set)
 ```
