@@ -6,4 +6,7 @@ These notes are meant to cover the theory, and while I don't intend to discuss t
 
 Machine learning involves maths. Maths is easiest to write in LaTeX. Github's flavour of markdown does not support LaTeX. Therefore I cannot use markdown (sadly). Alas, I will have to experiment with jupyter notebooks, or just to upload the notes as PDFs.
 
-I have also included a folder called `first_principles`, inside which are some of my attempts to code certain machine learning algorithms with minimal use of external libraries (except for basics such as numpy). Note that these are definitely not optimal solutions, I have rather gone with methods that are easiest to code. 
+## Also ontained in this repository
+
+- `first_principles`, a folder which contains some of my attempts to code certain machine learning algorithms with minimal use of external libraries (except for basics such as numpy). Note that these are definitely not optimal solutions, I have rather gone with methods that are easiest to code.
+- `Python_vs_R.md`. This summarises my opinions on when one should use python or R. For each machine learning model, I make some comments on the ease/quality of implementation in each language, and give a verdict on which languag I would use in future. 
