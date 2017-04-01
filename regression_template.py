@@ -4,8 +4,7 @@ Created on Mon Mar 20 20:13:03 2017
 @author: Robert
 """
 
-# Regression Template
-
+## Regression Template ##
 
 # Importing the libraries
 import numpy as np
@@ -33,32 +32,33 @@ sc_y = StandardScaler()
 y_train = sc_y.fit_transform(y_train)"""
 
 # Fitting the Regression Model to the dataset
-"""
 from sklearn.linear_model import LinearRegression
+regressor = LinearRegression()
 
 from sklearn.preprocessing import PolynomialFeatures
-poly_reg = PolynomialFeatures(degree = 4)
-X_poly = poly_reg.fit_transform(X)
+regressor = PolynomialFeatures(degree = 4)
+X_poly = regressor.fit_transform(X)
 
 from sklearn.svm import SVR
 regressor = SVR(kernel = 'rbf')
 
 from sklearn.tree import DecisionTreeRegressor
 regressor = DecisionTreeRegressor()
-"""
 
-regressor = LinearRegression()
+from sklearn.ensemble import RandomForestRegressor
+regressor = RandomForestRegressor(n_estimators = 100)
+
+
 regressor.fit(X,y)
 
 # Predicting a new result
-y_pred = regressor.predict(val)
+y_pred = regressor.predict(10)
 
 # In the case where we scaled the variables:
 """
 y_pred = sc_y.inverse_transform(
-        regressor.predict(sc_X.transform(np.array([[val]]))))
+        regressor.predict(sc_X.transform(np.array([[10]]))))
 """
-
 
 # Visualising the Regression results 
 X_grid = np.arange(min(X), max(X), 0.1)
