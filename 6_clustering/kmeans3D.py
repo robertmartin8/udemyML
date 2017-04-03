@@ -13,30 +13,30 @@ from mpl_toolkits.mplot3d import Axes3D
 ds = pd.read_csv('Mall_Customers.csv')
 X = ds.iloc[:, 2:5].values
 
-
 # Choosing the value of k
-#
-#wcss = []
-#
-#for i in range(1,21):
-#    kmeans = KMeans(n_clusters=i)
-#    kmeans.fit_predict(X)
-#    wcss.append(kmeans.inertia_)
-#
-#plt.plot(range(1,21), wcss)
-#plt.title('The Elbow Method')
-#plt.xlabel('Number of clusters')
-#plt.ylabel('WCSS')
-#plt.show()
+wcss = []
 
-plt.cla()
+for i in range(1,21):
+    kmeans = KMeans(n_clusters=i)
+    kmeans.fit_predict(X)
+    wcss.append(kmeans.inertia_)
+    
+plt.figure(1)
+plt.plot(range(1,21), wcss)
+plt.title('The Elbow Method')
+plt.xlabel('Number of clusters')
+plt.ylabel('WCSS')
+plt.show()
+
 k = 6
 
+# Clustering
 kmeans = KMeans(n_clusters = k)
 y_kmeans = kmeans.fit(X)
 
 labels = y_kmeans.labels_
 
+# Making the 3D plot
 fig = plt.figure()
 ax = Axes3D(fig)
 
