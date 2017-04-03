@@ -69,6 +69,18 @@ Verdict: **R, unless we need OneHotEncoder**.
 
 **Verdict: R because of the tree visualisation**
 
-## K-means clustering
+## Clustering
 
-## Hierarchical clustering
+- kmeans is a built-in in R, and it is marginally easier to use than the python version
+- Likewise, hierarchical clustering is slightly easier in R.
+- However, the plots in python are *so* much prettier.
+
+**Verdict: python if you need visualisation**
+
+
+## Association rule learning
+
+- The `arules` package in R is very easy to use, and the output is very readable.
+- This is contrasted to the particular formatting required by `apyori`, and the awful output.
+
+**Verdict: strong R**
