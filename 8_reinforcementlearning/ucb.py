@@ -34,7 +34,7 @@ mean_random_reward = np.mean(random_rewards)
 # Sample each distribution once to initialise. 
 ads_selected = [i for i in range(d)]
 num_selections = [1] * d
-sum_rewards = [ds.values[0, i] for i in range(d)] 
+sum_rewards = ds.iloc[0,:].tolist() 
 total_reward = sum(sum_rewards)
 
 # The lower bound on the range is 1 since we have already initialised.
