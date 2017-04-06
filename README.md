@@ -6,7 +6,7 @@ Initially I planned on writing notes for all the topics, and I still plan to do 
 
 The code is not just the same as Hadelin's, in many cases I have made improvements by using libraries that Hadelin has overlooked (e.g backwards elimination in R). I have also included many pictures of plots, some of which are original.
 
-## Also ontained in this repository
+## Also contained in this repository
 
 - `Python_vs_R.md`. This summarises my opinions on when one should use python or R. For each machine learning model, I make some comments on the ease/quality of implementation in each language, and give a verdict on which languag I would use in future.
 - A 'cool gif' which was my first experiment into fiddling with the parameters. The gif shows the effect on the classification plot of varying the penalty parameter in the SVM model. I made the gif using an online tool, though the individual images I generated with my own code.
