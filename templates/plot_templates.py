@@ -108,7 +108,6 @@ plt.legend()
 plt.show()
 
 
-
 # Dendrogram
 
 z = sch.linkage(X, method = 'ward')
@@ -116,4 +115,20 @@ dendrogram = sch.dendrogram(z)
 plt.title('Dendrogram')
 plt.xlabel('Customers')
 plt.ylabel('Euclidean distances')
+plt.show()
+
+
+# Bar chart with two lists
+
+width = 0.35 # width of bar
+ind = np.arange(d) # d is a numerical category
+
+fig, ax = plt.subplots()
+rects1 = ax.bar(ind, LIST1, width)
+rects2 = ax.bar(ind + width, LIST2 , width)
+ax.set_xlabel('x categories')
+#ax.set_yticks([])
+ax.set_xticks(range(d))
+ax.legend((rects1[0], rects2[0]), ('LIST1', 'LIST2'))
+ax.set_title('')
 plt.show()

@@ -84,3 +84,17 @@ Verdict: **R, unless we need OneHotEncoder**.
 - This is contrasted to the particular formatting required by `apyori`, and the awful output.
 
 **Verdict: strong R**
+
+## Reinforcement learning
+
+- I coded the UCB and Thompson sampling algorithms from scratch. Any time I have to code something from scratch, python is a better choice.
+- In any case, the R code was adapted straight from the python code.
+
+**Verdict: python**
+
+## Natural language processing
+
+- Interacting with the corpus is a pain in R.
+- However, you can clean the text and create the sparse matrix in one simple function (though Hadelin chooses not to do this).
+
+**Verdict: strong R**
