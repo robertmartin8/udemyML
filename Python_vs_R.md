@@ -98,3 +98,10 @@ Verdict: **R, unless we need OneHotEncoder**.
 - However, you can clean the text and create the sparse matrix in one simple function (though Hadelin chooses not to do this).
 
 **Verdict: strong R**
+
+## Neural Networks
+
+- Neural networks seem to be much slower in python, because R connects to an external server which does the computation for us. The difference is massive.
+- However, R still doesn't have strong support for convolutional neural networks.
+
+**Verdict: strong R, unless you need convolutional NNs**
