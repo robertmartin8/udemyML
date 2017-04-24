@@ -17,6 +17,10 @@ y = ds.iloc[:, 13].values
 
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 
+# Encoding gender
+labelencoder_X_2 = LabelEncoder()
+X[:, 2] = labelencoder_X_2.fit_transform(X[:, 2])
+
 # Encoding country categories
 labelencoder_X_1 = LabelEncoder()
 X[:, 1] = labelencoder_X_1.fit_transform(X[:, 1])
@@ -24,9 +28,6 @@ onehotencoder = OneHotEncoder(categorical_features=[1])
 X = onehotencoder.fit_transform(X).toarray()
 X = X[:, 1:]
 
-# Encoding gender
-labelencoder_X_2 = LabelEncoder()
-X[:, 2] = labelencoder_X_2.fit_transform(X[:, 2])
 
 # Feature scaling
 from sklearn.preprocessing import StandardScaler
