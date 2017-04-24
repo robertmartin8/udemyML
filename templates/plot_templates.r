@@ -1,9 +1,9 @@
 
 # Plotting regression results
 library(ggplot2)
-x_grid = seq(min(dataset$Level), max(dataset$Level), 0.1)
+x_grid = seq(min(dataset$indep), max(dataset$indep), 0.1)
 ggplot() +
-    geom_point(aes(x = dataset$Level, y = dataset$Salary),
+    geom_point(aes(x = dataset$indep, y = dataset$dep),
                colour = 'red') +
     geom_line(aes(x = x_grid, y = predict(regressor, newdata = data.frame(Level = x_grid))),
               colour = 'blue') +
