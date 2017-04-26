@@ -7,7 +7,6 @@ For a number of algorithms, the language does not make a difference so choose ba
 - K-nearest neighbours
 - Naïve Bayes classification
 
-
 ## Data preprocessing
 
 - R requires far fewer packages, and we never have to deal with instantiating objects etc.
@@ -20,8 +19,11 @@ Verdict: **R, unless we need OneHotEncoder**.
 ## General data visualisation
 
 - R has many convenient built in plot functions for specific algorithms, e.g the SVM and decision tree.
-- Plots by default seem to be a bit prettier in R.
+- Plots by default seem to be a bit prettier in R. But ggplot is pretty nasty to use.
 - However, the coloured scatterplot for classification is noticeably slower in R than python.
+- Seaborn is beautiful.
+
+Verdict: **Slight python**
 
 ## Linear regression
 
@@ -60,7 +62,7 @@ Verdict: **R, unless we need OneHotEncoder**.
 - About the same ease of use in both.
 - But R has a default plot function for the SVM classifier which, in one line, does what normally requires 15 in both R and python.
 
-**R, because of the plot()**
+**Verdict: R, because of the plot()**
 
 ## Decision tree classification
 
@@ -105,3 +107,18 @@ Verdict: **R, unless we need OneHotEncoder**.
 - However, R still doesn't have strong support for convolutional neural networks.
 
 **Verdict: strong R, unless you need convolutional NNs**
+
+## Model selection
+
+- Cross validation is overall a bit nicer in python.
+- The `sklearn` grid search is far more intuitive, and seems to allow tuning of more different parameters, however there is a lot of hard coding required.
+- The `caret` library in R on the other hand is almost mystical.
+
+**Verdict: slight python **
+
+## XGBoost
+
+- The installation in python is nightmarish, but it is just `install.packages('xgboost')` in R!
+- But after it is installed, it is just as easy to run in both R and python. Thus it's a matter of which syntax you prefer.
+
+**Verdict: slight R, but mostly because it is hard to install for python**
