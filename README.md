@@ -1,5 +1,5 @@
 <p align="center">
-    <img width=60% src="https://github.com/robertmartin8/udemyML/tree/master/media/logo.png">
+    <img width=60% src="https://github.com/robertmartin8/udemyML/blob/master/media/logo.png">
 </p>
 
 This repository contains my code following [Udemy's Machine Learning A-Z course](https://www.udemy.com/machinelearning/learn/v4/overview), by Kirill Eremenko and Hadelin de Ponteves. I was not a complete beginner when I went through the course, so in many cases I have made significant improvements to Hadelin's code, for example by using libraries that make the code a lot more intuitive (e.g backwards elimination in R). I have also included many original plots (and the code to generate them).
@@ -7,14 +7,13 @@ This repository contains my code following [Udemy's Machine Learning A-Z course]
 This repository will be useful for any learners following the course, or for anyone who needs a quick overview regarding how to implement a certain algorithm in python. I have provided a number of useful templates in both python and R (see the [templates](https://github.com/robertmartin8/udemyML/tree/master/templates) folder). If you find this useful, don't forget to leave a :star:
 
 <p align="center">
-    <img width=60% src="https://github.com/robertmartin8/udemyML/tree/master/media/svm_training.gif">
+    <img width=60% src="https://github.com/robertmartin8/udemyML/blob/master/media/svm_training.gif">
 </p>
 
 If you'd like some practical advice on how to get better at machine learning, I wrote a [post](https://reasonabledeviations.science/2017/12/28/learning-ml/) on my [website](https://reasonabledeviations.science/) with a guide, so you can learn from my mistakes. I do recommend this Udemy ML course, among others.
 
-## Contents
+# Contents
 
-- [Contents](#contents)
 - [Templates](#templates)
 - [Notes](#notes)
 - [Python vs R](#python-vs-r)
