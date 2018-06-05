@@ -14,11 +14,16 @@ If you'd like some practical advice on how to get better at machine learning, I 
 
 # Contents
 
+- [Getting started](#getting-started)
 - [Templates](#templates)
 - [Notes](#notes)
 - [Python vs R](#python-vs-r)
 - [Thoughts on the course](#thoughts-on-the-course)
 - [About](#about)
+
+## Getting started
+
+To best make use of this repository, click on the "Clone or download" button towards the top-right of the page. Then, click "Download Zip". Use your preferred software to unzip it, and you're ready to go.
 
 ## Templates
 
