@@ -6,25 +6,26 @@ ds = ds[, 3:5]
 # Scaling and splitting
 library(caTools)
 ds[,1:2] = scale(ds[,1:2])
-
 split = sample.split(ds$Purchased, SplitRatio = 0.75)
 train = subset(ds, split == TRUE)
 test = subset(ds, split == FALSE)
 
-#KNN
+
+# KNN
 library(class)
 y_pred = knn(train[, -3], 
              test[, -3], 
              cl = train[, 3], 
              k = 5)
 
+
 # Logistic regression
 clf = glm(formula = Purchased ~ ., 
           data = train,
           family = binomial)
-
 prob_pred = predict(clf, type = 'response', newdata = test[-3])
 y_pred = ifelse(prob_pred >= 0.5, 1, 0)
+
 
 # SVM
 library(e1071)
@@ -33,6 +34,7 @@ clf = svm(formula = Purchased ~ .,
           kernel = 'radial',
           type = 'C-classification')
 y_pred = predict(clf, type = 'response', newdata = test[-3])
+
 
 # Naive Bayes - requires encoding
 library(e1071)
@@ -43,9 +45,9 @@ y_pred = predict(clf, newdata = test[-3])
 library(rpart)
 clf = rpart(formula = Purchased ~.,
             data = train)
-
 prob_pred = predict(clf, newdata = test[-3])
 y_pred = ifelse(prob_pred>0.5, 1, 0)
+
 
 # Randomforest
 library(randomForest)

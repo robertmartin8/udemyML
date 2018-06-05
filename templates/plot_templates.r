@@ -38,7 +38,6 @@ points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 
 
 # Cluster plot
-
 clusplot(X,
          kmeans$cluster,
          lines = 0,
