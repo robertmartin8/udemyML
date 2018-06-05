@@ -1,10 +1,8 @@
 # Udemy Machine Learning
 
-This repository will contain my code following [Udemy's Machine Learning A-Z course](https://www.udemy.com/machinelearning/learn/v4/overview), by Kirill Eremenko and Hadelin de Ponteves.
+This repository contains my code following [Udemy's Machine Learning A-Z course](https://www.udemy.com/machinelearning/learn/v4/overview), by Kirill Eremenko and Hadelin de Ponteves.
 
-Initially I planned on writing notes for all the topics, and I still plan to do this at some stage, but as it happens the course is focused on practical application rather than theory.
-
-The code is not just the same as Hadelin's, in many cases I have made improvements by using libraries that Hadelin has overlooked (e.g backwards elimination in R). I have also included many pictures of plots, some of which are original.
+The code is not just the same as Hadelin's, in many cases I have made improvements by using libraries that Hadelin has overlooked (e.g backwards elimination in R). I have also included many pictures of plots, many of which are original.
 
 ## Also contained in this repository
 
@@ -23,4 +21,4 @@ Basically, I would have liked to see some more theory, because often this gives 
 
 However, what I don't understand is where they draw the line between writing code from scratch and using the available libraries. The course makes massive use of the standard libraries most of the time (which I have no objection to), but then sometimes it neglects to use a built-in which would save many lines of code. For example, the backwards-elimination method that we implemented from scratch in R can be replaced by the built in `step()` function. Literally 6 characters.
 
-While I am complaining quite a lot, this course has sparked/renewed my interest in machine learning, and has given me the motivation to go and learn the theory, either from a textbook like Elements of Statistical Learning, or from a more rigorous course like Andrew Ng's machine learning on Coursera, which I had previously started, but had given up on. 
+While I am complaining quite a lot, this course has sparked/renewed my interest in machine learning, and has given me the motivation to go and learn the theory, either from a textbook like Elements of Statistical Learning, or from a more rigorous course like Andrew Ng's Machine Learning on Coursera, which I had previously started, but had given up on.
