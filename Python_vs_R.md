@@ -1,11 +1,4 @@
-# Python versus R
-
-Which language should I use for which algorithm?
-
-For a number of algorithms, the language does not make a difference so choose based on coherence with the rest of the project:
-- Random forest regression and classification
-- K-nearest neighbours
-- Naïve Bayes classification
+# python versus R
 
 ## Data preprocessing
 
@@ -23,7 +16,7 @@ Verdict: **R, unless we need OneHotEncoder**.
 - However, the coloured scatterplot for classification is noticeably slower in R than python.
 - Seaborn is beautiful.
 
-Verdict: **Slight python**
+Verdict: **python: performance combined with pretty Seaborn visuals**
 
 ## Linear regression
 
@@ -41,6 +34,7 @@ Verdict: **Slight python**
 ## SVR
 
 - The python library requires us to scale our values, while the R library e1071 takes care of it.
+- Not many differences otherwise
 
 **Verdict: R**
 
@@ -49,7 +43,6 @@ Verdict: **Slight python**
 - Easy to implement in both languages, but it is slightly more intuitive in python.
 
 **Verdict: Python**
-
 
 ## Logistic regression
 
@@ -73,12 +66,11 @@ Verdict: **Slight python**
 
 ## Clustering
 
-- kmeans is a built-in in R, and it is marginally easier to use than the python version
+- kmeans is a builtin function in R, and it is marginally easier to use than the python version
 - Likewise, hierarchical clustering is slightly easier in R.
 - However, the plots in python are *so* much prettier.
 
 **Verdict: python if you need visualisation**
-
 
 ## Association rule learning
 
@@ -89,7 +81,7 @@ Verdict: **Slight python**
 
 ## Reinforcement learning
 
-- I coded the UCB and Thompson sampling algorithms from scratch. Any time I have to code something from scratch, python is a better choice.
+- I coded the UCB and Thompson sampling algorithms from scratch: any time I have to code something from scratch, I believe python is a better choice (but this may be biased).
 - In any case, the R code was adapted straight from the python code.
 
 **Verdict: python**
@@ -103,10 +95,12 @@ Verdict: **Slight python**
 
 ## Neural Networks
 
-- Neural networks seem to be much slower in python, because R connects to an external server which does the computation for us. The difference is massive.
+- Neural networks seem to be much slower in python, because h2o in R connects to an external server which does the computation for us. The difference is massive.
 - However, R still doesn't have strong support for convolutional neural networks.
+- Not shown in the course, but python can connect to h2o too.
+- Python has better support for general neural networks.
 
-**Verdict: strong R, unless you need convolutional NNs**
+**Verdict: python, with an honourable mention to R h2o*
 
 ## Model selection
 
@@ -114,11 +108,20 @@ Verdict: **Slight python**
 - The `sklearn` grid search is far more intuitive, and seems to allow tuning of more different parameters, however there is a lot of hard coding required.
 - The `caret` library in R on the other hand is almost mystical.
 
-**Verdict: slight python **
+**Verdict: python (slightly)**
 
 ## XGBoost
 
 - The installation in python is nightmarish, but it is just `install.packages('xgboost')` in R!
+- That being said, I believe nowadays XGBoost is much easier to install in python
 - But after it is installed, it is just as easy to run in both R and python. Thus it's a matter of which syntax you prefer.
 
 **Verdict: slight R, but mostly because it is hard to install for python**
+
+## Ambivalence
+
+For a number of algorithms, I found that the language really doesn't make a difference, so in these cases just choose python or R based on your particular application – i.e if it's a practical project like a backend web app, go with python, but if it's a statistical research project, consider R.
+
+- Random forest regression and classification
+- K-nearest neighbours
+- Naïve Bayes classification
