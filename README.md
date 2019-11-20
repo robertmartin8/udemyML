@@ -10,7 +10,7 @@ This repository will be useful for any learners following the course, or for any
     <img width=60% src="https://github.com/robertmartin8/udemyML/blob/master/media/svm_training.gif">
 </p>
 
-If you'd like some practical advice on how to get better at machine learning, I wrote a [post](https://reasonabledeviations.science/2017/12/28/learning-ml/) on my [website](https://reasonabledeviations.science/) with a guide, so you can learn from my mistakes. I do recommend this Udemy ML course, among others.
+If you'd like some practical advice on how to get better at machine learning, I wrote a [post](https://reasonabledeviations.com/2017/12/28/learning-ml/) on my [website](https://reasonabledeviations.com/) with a guide, so you can learn from my mistakes. I do recommend this Udemy ML course, among others.
 
 # Contents
 
@@ -62,4 +62,4 @@ In all fairness, the course never claims to go be a super detailed exploration 
 
 This project is available for use, modification etc as discussed under the MIT License.
 
-For more content like this, check out [reasonabledeviations.science](https://reasonabledeviations.science).
+For more content like this, check out [reasonabledeviations.com](https://reasonabledeviations.com).
